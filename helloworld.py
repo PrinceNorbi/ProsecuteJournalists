@@ -17,8 +17,8 @@ api.add_resource(Greeting, '/') # Route_1
 if __name__ == '__main__':
    app.run('0.0.0.0','80')
 
+
 #To make favicon work 2/2
-@app.route('/favicon.ico')
+@app.route("/favicon.ico")
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
