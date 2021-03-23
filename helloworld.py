@@ -15,7 +15,7 @@ class Greeting (Resource):
 api.add_resource(Greeting, '/') # Route_1
 
 if __name__ == '__main__':
-   app.run('0.0.0.0','80')
+   app.run('0.0.0.0')
 
 
 #To make favicon work 2/2
