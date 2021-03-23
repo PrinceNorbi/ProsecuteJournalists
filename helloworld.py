@@ -1,6 +1,16 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 
+#To make favicon work
+import os
+from flask import send_from_directory
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+#App
 app = Flask(__name__)
 api = Api(app)
 
